@@ -17,7 +17,7 @@ An [OpenClaw](https://github.com/openclaw/openclaw) skill to track your OpenRout
 
 ```bash
 # Clone into your OpenClaw workspace skills directory
-git clone https://github.com/luiscajigas/openrouter-usage ~/.openclaw/workspace/skills/openrouter-usage
+git clone https://github.com/ZarpAIbot/openrouter-usage ~/.openclaw/workspace/skills/openrouter-usage
 
 # Or use ClawHub (if published)
 clawhub install openrouter-usage
@@ -26,7 +26,7 @@ clawhub install openrouter-usage
 ### Standalone
 
 ```bash
-git clone https://github.com/luiscajigas/openrouter-usage
+git clone https://github.com/ZarpAIbot/openrouter-usage
 cd openrouter-usage
 python3 scripts/openrouter_usage.py --help
 ```
