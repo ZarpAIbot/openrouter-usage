@@ -16,6 +16,16 @@ An [OpenClaw](https://github.com/openclaw/openclaw) skill to track your OpenRout
 
 ## Install
 
+**ClawHub:** [lcajigasm/openrouter-usage-info](https://clawhub.ai/lcajigasm/openrouter-usage-info)
+
+### From ClawHub
+
+```bash
+clawhub install lcajigasm/openrouter-usage-info
+```
+
+### From source
+
 ```bash
 git clone https://github.com/ZarpAIbot/openrouter-usage
 cd openrouter-usage
