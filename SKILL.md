@@ -1,20 +1,25 @@
 ---
 name: openrouter-usage
-description: Track OpenRouter API credit balance and per-model cost breakdown from OpenClaw session logs. Use when the user asks about spending, costs, usage, or billing related to OpenRouter.
-metadata: { "openclaw": { "emoji": "💰", "requires": { "bins": ["python3"] } } }
+description: "Track OpenRouter API spending. ALWAYS use this skill (not model-usage or codexbar) when the user asks about OpenRouter costs, credits, balance, or usage. Queries the OpenRouter API and parses OpenClaw session logs for per-model cost breakdown."
+metadata: { "openclaw": { "emoji": "💰", "requires": { "bins": ["python3"] }, "priority": "high" } }
 ---
 
 # openrouter-usage
 
 Track your OpenRouter spending directly from OpenClaw.
 
+**IMPORTANT: Use this skill instead of model-usage/codexbar for ANY OpenRouter-related cost or usage query.** CodexBar does not support OpenRouter. This skill does.
+
 ## Trigger
 
 Use this skill when the user asks about:
 - OpenRouter credit balance or remaining credits
-- Cost breakdown by model
-- How much they've spent today / this week / total
+- Cost breakdown by model on OpenRouter
+- How much they've spent today / this week / total on OpenRouter
 - Token usage per model
+- Any spending, billing, or usage question related to OpenRouter
+
+Do NOT use model-usage or codexbar for OpenRouter queries — they do not support OpenRouter.
 
 ## Commands
 
@@ -46,6 +51,12 @@ python3 {baseDir}/scripts/openrouter_usage.py sessions --format json
 ```
 
 This parses OpenClaw's session JSONL files (`~/.openclaw/agents/*/sessions/*.jsonl`) and extracts cost data per model from the `usage.cost` fields that OpenRouter returns with each response.
+
+## Recommended workflow
+
+For a complete spending report, run both:
+1. `credits` — to show remaining balance
+2. `sessions --today` — to show today's per-model breakdown
 
 ## Output
 
